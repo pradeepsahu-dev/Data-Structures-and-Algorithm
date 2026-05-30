@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class smallest_Number {
 
     public static int smallest_nums(int arr[]){
