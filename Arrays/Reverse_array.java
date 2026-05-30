@@ -4,6 +4,9 @@ public class Reverse_array {
        int first = 0;
        int last = arr.length-1;
        while(first < last){
+
+        //swap
+        
            int temp = arr[last];
            arr[last] = arr[first];
            arr[first] = temp;
