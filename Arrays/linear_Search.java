@@ -13,7 +13,11 @@ public class linear_Search {
         return -1;
     }
 
+   
+
     public static void main(String[]args){
+
+      
         int number[] = {2,5,8,4,7,3,8,2};
         int key = 3;
         
