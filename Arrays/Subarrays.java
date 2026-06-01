@@ -10,7 +10,7 @@ public class Subarrays {
                     System.out.print(arr[k]+" ");
                 }
                 System.out.print(",");
-                
+    
             }
             System.out.println();
         }
