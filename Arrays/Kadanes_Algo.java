@@ -7,14 +7,15 @@ public class Kadanes_Algo {
 
             currSum += arr[i];
 
+            maxSum = Math.max(currSum , maxSum);
+
+
             if(currSum < 0){
                 currSum = 0;
             }
 
-            maxSum = Math.max(currSum , maxSum);
-
         }
-        System.out.println(maxSum);
+        System.out.println("Max Subarray sum is:"+maxSum);
 
     }
 
