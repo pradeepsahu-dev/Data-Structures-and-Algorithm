@@ -6,11 +6,10 @@ public class Kadanes_Algo {
         for(int i=0; i<=arr.length-1; i++){
 
             currSum += arr[i];
-
+        
             maxSum = Math.max(currSum , maxSum);
 
-
-            if(currSum < 0){
+             if(currSum < 0){
                 currSum = 0;
             }
 
@@ -20,7 +19,7 @@ public class Kadanes_Algo {
     }
 
     public static void main(String[]args){
-        int arr[] = {-2,-3,4,-1,-2,1,5,-3};
+        int arr[] = {-3,7,-4,-2,-7,6,8-2};
         kadane(arr);
     }
     
