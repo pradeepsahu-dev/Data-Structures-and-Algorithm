@@ -3,7 +3,8 @@ import java.util.Arrays;
 
 public class Trapped_Rainwater {
 
-    public static void trappedWater(int height[]){
+    public static void trappedRain_Water(int height[], int bar_Width){
+        
         int n = height.length;
 
         // calculate left max
@@ -14,7 +15,6 @@ public class Trapped_Rainwater {
             leftMax[i]= Math.max(height[i], leftMax[i-1]);
 
         }
-         System.out.println(Arrays.toString(leftMax));
 
         // calculate right max
         int rightMax[] = new int [n];
@@ -23,11 +23,20 @@ public class Trapped_Rainwater {
             rightMax[i] = Math.max(height[i], rightMax[i+1]);
 
         }
-         System.out.println(Arrays.toString(rightMax));
+
+         int trappedWater = 0;
+         for(int i=0; i<=height.length-1; i++){
+            int waterLevel = Math.min(leftMax[i], rightMax[i]);
+            trappedWater =  trappedWater + (waterLevel - height[i])*bar_Width;
+
+         }
+         System.out.println("Total Trapped Rainwater:" + trappedWater);
+
     }
     public static void main(String[]args){
         int height[] = {4,2,0,6,3,2,5}; 
-        trappedWater(height);
+        int bar_Width = 1;
+        trappedRain_Water(height, bar_Width);
     }
     
 }
