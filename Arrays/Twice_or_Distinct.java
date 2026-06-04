@@ -1,4 +1,4 @@
-public class Twice_or_not {
+public class Twice_or_Distinct {
 
     public static boolean twice_value(int arr[]){
         for(int i=0; i<arr.length; i++){
