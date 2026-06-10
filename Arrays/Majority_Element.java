@@ -2,6 +2,22 @@ import java.util.HashMap;
 
 public class Majority_Element {
 
+    // Moore's Voting Algorithm
+    public static int majorityelement(int arr[]){
+        int freq = 0, ans = 0;
+        for(int i=0; i<arr.length; i++){
+            if(freq == 0){
+                ans = arr[i];
+            }
+            if(ans == arr[i]){
+                freq ++;
+            }else{
+                freq --;
+            }
+        }
+        return ans;
+    }
+
     //optimized 
     public static int MajorityElement(int arr[]){
         HashMap<Integer,Integer> map = new HashMap<>();
@@ -47,7 +63,7 @@ public class Majority_Element {
     }
     public static void main(String[]args){
         int arr[] = {2,2,1,1,1,2,2};
-        System.out.println(MajorityElement(arr));
+        System.out.println(majorityelement(arr));
     }
     
 }
